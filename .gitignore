@@ -9,3 +9,5 @@ __pycache__
 build
 docs/pydoc/*.html
 .coverage
+htmlcov
+.tox
