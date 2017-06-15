@@ -47,14 +47,14 @@ version = [
 if __name__ == "__main__":
     ### Now the actual set up call
     setup (
-        name = "PyDispatcher",
+        name = "PyPyDispatcher",
         version = version,
         description= "Multi-producer-multi-consumer signal dispatching mechanism",
         author = "Patrick K. O'Brien",
         maintainer = "Mike C. Fletcher",
         author_email = "pydispatcher-devel@lists.sourceforge.net",
         maintainer_email = "pydispatcher-devel@lists.sourceforge.net",
-        url = "http://pydispatcher.sourceforge.net",
+        url = "https://github.com/lopuhin/pydispatcher",
         license = "BSD",
 
         package_dir = {
