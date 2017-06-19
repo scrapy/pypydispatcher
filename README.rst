@@ -1,9 +1,9 @@
-PyDispatcher
-============
+PyPyDispatcher
+==============
 
 
-.. image:: https://img.shields.io/pypi/v/PyDispatcher-PyPy.svg
-   :target: https://pypi.python.org/pypi/PyDispatcher-PyPy
+.. image:: https://img.shields.io/pypi/v/PyPyDispatcher.svg
+   :target: https://pypi.python.org/pypi/PyPyDispatcher
    :alt: PyPI Version
 
 .. image:: https://travis-ci.org/lopuhin/pydispatcher.svg?branch=master
@@ -16,6 +16,27 @@ PyDispatcher
 
 
 A fork of http://pydispatcher.sourceforge.net/ with PyPy support.
+
+
+Install::
+
+    pip install PyPyDispatcher
+
+
+Changes since PyDispatcher 2.0.5
+--------------------------------
+
+
+2.1.0 (2017-06-19)
+++++++++++++++++++
+
+- PyPy support in master and on Travis CI
+
+
+2.0.6 (2017-06-15)
+++++++++++++++++++
+
+- Initial PyPy support
 
 
 License

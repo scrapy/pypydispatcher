@@ -66,7 +66,7 @@ if __name__ == "__main__":
         ],
 
         options = {
-            'sdist':{'use_defaults':0, 'force_manifest':1,'formats': ['gztar','zip'],},
+            'sdist':{'use_defaults':0, 'force_manifest':1,'formats': ['gztar'],},
             'bdist_rpm':{
                 'group':'Libraries/Python',
                 'provides':'python-dispatcher',
