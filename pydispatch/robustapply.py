@@ -17,7 +17,7 @@ else:
     im_code = 'im_code'
     func_code = 'func_code'
 
-def function( receiver ):
+def function(receiver):
     """Get function-like callable object for given receiver
 
     returns (function_or_method, codeObject, fromMethod)
@@ -25,16 +25,15 @@ def function( receiver ):
     If fromMethod is true, then the callable already
     has its first argument bound
     """
-    if hasattr(receiver, '__call__'):
-        # Reassign receiver to the actual method that will be called.
-        if hasattr( receiver.__call__, im_func) or hasattr( receiver.__call__, im_code):
-            receiver = receiver.__call__
-    if hasattr( receiver, im_func ):
-        # an instance-method...
+    if hasattr(receiver, im_func):
         return receiver, getattr(getattr(receiver, im_func), func_code), 1
-    elif not hasattr( receiver, func_code):
-        raise ValueError('unknown reciever type %s %s'%(receiver, type(receiver)))
-    return receiver, getattr(receiver,func_code), 0
+    elif hasattr(receiver, func_code):
+        return receiver, getattr(receiver, func_code), 0
+    elif hasattr(receiver, '__call__'):
+        return function(receiver.__call__)
+    else:
+        raise ValueError('unknown reciever type %s %s' %
+                         (receiver, type(receiver)))
 
 def robustApply(receiver, *arguments, **named):
     """Call receiver with arguments and an appropriate subset of named

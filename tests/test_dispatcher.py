@@ -1,17 +1,25 @@
+import gc
+import unittest
+
 from pydispatch.dispatcher import *
 from pydispatch import dispatcher, robust
 
-import unittest
+
 def x(a):
     return a
 
+
 class Dummy( object ):
     pass
+
+
 class Callable(object):
     def __call__( self, a ):
         return a
+
     def a( self, a ):
         return a
+
 
 class DispatcherTests(unittest.TestCase):
     """Test suite for dispatcher (barely started)"""
@@ -74,6 +82,7 @@ class DispatcherTests(unittest.TestCase):
         connect( a.a, signal, b )
         expected = []
         del a
+        garbage_collect()
         result = send('this',b, a=b)
         assert result == expected,"""Send didn't return expected result:\n\texpected:%s\n\tgot:%s"""% (expected, result)
         assert len(list(getAllReceivers(b,signal))) == 0, """Remaining handlers: %s"""%(getAllReceivers(b,signal),)
@@ -88,6 +97,7 @@ class DispatcherTests(unittest.TestCase):
         connect( a, signal, b )
         expected = []
         del a
+        garbage_collect()
         result = send('this',b, a=b)
         assert result == expected,"""Send didn't return expected result:\n\texpected:%s\n\tgot:%s"""% (expected, result)
         assert len(list(getAllReceivers(b,signal))) == 0, """Remaining handlers: %s"""%(getAllReceivers(b,signal),)
@@ -110,6 +120,7 @@ class DispatcherTests(unittest.TestCase):
         del a
         del b
         del result
+        garbage_collect()
         self._isclean()
     def testRobust( self ):
         """Test the sendRobust function"""
@@ -141,8 +152,14 @@ class DispatcherTests(unittest.TestCase):
         )
         
 
+
+def garbage_collect():
+    gc.collect()
+
+
 def getSuite():
     return unittest.makeSuite(DispatcherTests,'test')
         
+
 if __name__ == "__main__":
     unittest.main ()
