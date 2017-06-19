@@ -29,7 +29,6 @@ be a drop-in replacement.
 Changes since PyDispatcher 2.0.5
 --------------------------------
 
-
 2.1.0 (2017-06-19)
 ++++++++++++++++++
 
