@@ -22,6 +22,9 @@ Install::
 
     pip install PyPyDispatcher
 
+Note that the package name is the same as for PyDispatcher: this is intended to
+be a drop-in replacement.
+
 
 Changes since PyDispatcher 2.0.5
 --------------------------------
