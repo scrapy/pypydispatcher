@@ -6,8 +6,8 @@ PyPyDispatcher
    :target: https://pypi.python.org/pypi/PyPyDispatcher
    :alt: PyPI Version
 
-.. image:: https://travis-ci.org/scrapy/pydispatcher.svg?branch=master
-   :target: http://travis-ci.org/scrapy/pydispatcher
+.. image:: https://travis-ci.org/scrapy/pypydispatcher.svg?branch=master
+   :target: http://travis-ci.org/scrapy/pypydispatcher
    :alt: Build Status
 
 .. image:: http://codecov.io/github/scrapy/pypydispatcher/coverage.svg?branch=master
