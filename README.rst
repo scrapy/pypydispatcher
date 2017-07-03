@@ -29,6 +29,12 @@ be a drop-in replacement.
 Changes since PyDispatcher 2.0.5
 --------------------------------
 
+2.1.1 (2017-07-03)
+++++++++++++++++++
+
+- Make releases via Travis CI
+
+
 2.1.0 (2017-06-19)
 ++++++++++++++++++
 

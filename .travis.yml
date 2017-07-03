@@ -40,6 +40,13 @@ script: tox
 after_success:
   - codecov
 
+deploy:
+  provider: pypi
+  user: "lopuhin"
+  password:
+    secure: "dTm1M3TSQ17BbVbjuahnxQgCIWLs8/Q+UMIAOssc4NNhcVs8jmyaqL/MMx8rWAToOkbnzwCmtwANvZh628EfW9u5tF+boGCZEl5UeyWPIRpjtv8hozN9DgeDuEEVtwHDaLBZMvxiUr5WObvphssoX6jjXUKPBsddFkB2RCXKhhJwnsAg7vvvzTWUkAbQezDDVLHyD/ksSzVmuP+CnRjvDqTBp73npS79toziRHA4bo9JTAHOHCgYXeMfGC3cR/Y/FnymciOzRiVwiS1t22NHrFvikWE9o5fuEmRob1T+7E85hD18bVbSmeAUTN0YQNduViTdewO4vsnlsWN1f+iHjHn9v4nT1R1HQpUoyY2YQmaSSAiAv/GQWyJm2Cuh8F9HAPELrD0b0xdTj3cAdqa1EThG1pMaAcc0/KXG/MzVolgwGOSJMXu6CGk95b8OnNj5Ah87ulMYcFAPBpctmyw3PX6IUwDsBrGRTcUdylCjuEAgmLWtLbfcNj0KlRS66mQIQFupVJe9/Ef6X2SBegK+aTYWP4oGlrsoSQmOu9sfdAljsNqI1DXQvxh9SFaTy+Kchdpj5ekVgIg9j4Y52uns5C6EzfYDwSRXlq4YuMUI7fpjSTqr8PQ/Fi/IvZ063AjK9Fje+QOuRDlQi149HCMwsB+9tvcu0rBnC82tsm5AoXk="
+  on:
+    tags: true
 
 cache:
   directories:
