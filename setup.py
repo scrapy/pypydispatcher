@@ -7,7 +7,7 @@ to install the package from the source archive.
 """
 import sys, os
 try:
-    from setuptools import setup 
+    from setuptools import setup
 except ImportError:
     from distutils.core import setup
 
@@ -51,10 +51,10 @@ if __name__ == "__main__":
         version = version,
         description= "Multi-producer-multi-consumer signal dispatching mechanism",
         author = "Patrick K. O'Brien",
-        maintainer = "Mike C. Fletcher",
+        maintainer = "Scrapy project",
         author_email = "pydispatcher-devel@lists.sourceforge.net",
-        maintainer_email = "pydispatcher-devel@lists.sourceforge.net",
-        url = "https://github.com/lopuhin/pydispatcher",
+        maintainer_email = "info@scrapy.org",
+        url = "https://github.com/scrapy/pypydispatcher",
         license = "BSD",
 
         package_dir = {

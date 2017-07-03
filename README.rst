@@ -6,12 +6,12 @@ PyPyDispatcher
    :target: https://pypi.python.org/pypi/PyPyDispatcher
    :alt: PyPI Version
 
-.. image:: https://travis-ci.org/lopuhin/pydispatcher.svg?branch=master
-   :target: http://travis-ci.org/lopuhin/pydispatcher
+.. image:: https://travis-ci.org/scrapy/pypydispatcher.svg?branch=master
+   :target: http://travis-ci.org/scrapy/pypydispatcher
    :alt: Build Status
 
-.. image:: http://codecov.io/github/lopuhin/pydispatcher/coverage.svg?branch=master
-   :target: http://codecov.io/github/lopuhin/pydispatcher?branch=master
+.. image:: http://codecov.io/github/scrapy/pypydispatcher/coverage.svg?branch=master
+   :target: http://codecov.io/github/scrapy/pypydispatcher?branch=master
    :alt: Code Coverage
 
 
@@ -28,6 +28,12 @@ be a drop-in replacement.
 
 Changes since PyDispatcher 2.0.5
 --------------------------------
+
+2.1.2 (2017-07-03)
+++++++++++++++++++
+
+- Moved to https://github.com/scrapy/pypydispatcher
+
 
 2.1.1 (2017-07-03)
 ++++++++++++++++++
